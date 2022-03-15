@@ -6,7 +6,7 @@
 /*   By: aelaoufi <aelaoufi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/12 16:45:50 by aelaoufi          #+#    #+#             */
-/*   Updated: 2022/03/13 15:28:20 by aelaoufi         ###   ########.fr       */
+/*   Updated: 2022/03/15 18:40:59 by aelaoufi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,8 +52,15 @@ int	main(int ac, char **av, char **env)
 	int inputfile;
 	int outputfile;
 	
+	if (ac != 5)
+	{
+		perror("Wrong number or arguments");
+		return (0);
+	}
+	
 	inputfile = open(av[1], O_RDONLY);
 	outputfile = open(av[4], O_CREAT | O_RDWR | O_TRUNC, 0777);
+	(void)ac;
 	if  (pipe(fd) == -1)
 		return 1;
 	pid1 = fork();
