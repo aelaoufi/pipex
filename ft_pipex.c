@@ -6,7 +6,7 @@
 /*   By: aelaoufi <aelaoufi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/12 16:45:50 by aelaoufi          #+#    #+#             */
-/*   Updated: 2022/03/15 18:40:59 by aelaoufi         ###   ########.fr       */
+/*   Updated: 2022/03/15 18:43:52 by aelaoufi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ char *find_path(char **env)
 			return (*env + 5);
 		env++;
 	}
+	perror("commande:")
 	return (0);
 }
 
